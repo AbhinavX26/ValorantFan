@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Valorant</title>
+    <link rel="icon" href="Valorant.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <link rel="stylesheet" type="text/css" href="Vid.css">
+    <link rel="stylesheet" type="text/css" href="Buttons.css">
+    <link rel="stylesheet" type="text/css" href="Pop-up.css">
+    <style>
+        .team {
+            height: 35px;
+            padding: 7px 18px;
+            margin-left: 530px;
+            font-size: 17px;
+            background-color: #bd2431;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease-in-out;
+            color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .team:hover {
+            transform: scale(1.08);
+            background-color: #e33c4d;
+            text-shadow: 0 0 5px #e33c4d;
+        }
+    </style>
+</head>
+
+<body bgcolor="Black">
+    <header class="top-nav">
+
+        <div class="nav-container">
+            <div class="header-left">
+                <img src="Riot Games.jpg.webp" alt="Riot Games Logo" class="icon-logo-r">
+                <img src="Heading.png" alt="Valorant Logo" class="icon-logo-v">
+            </div>
+            <nav class="nav-links">
+                <div class="dropdown">Game Info ▾
+                    <div class="dropdown-menu">
+                        <a href="Overview.html">Overview</a>
+                        <a href="Agents.html">Agents</a>
+                        <a href="https://playvalorant.com/en-us/maps/" class="alert-link">Maps</a>
+                    </div>
+                </div>
+                <div class="dropdown"><a href="https://playvalorant.com/en-us/media/" class="rack alert-link">Media</a>
+                </div>
+                <div class="dropdown"><a href="https://playvalorant.com/en-us/news/" class="rack alert-link">News</a>
+                </div>
+                <div class="dropdown">Social Media ▾
+                    <div class="dropdown-menu">
+                        <a href="https://twitter.com/valorant" target="_blank" class="alert-link">X</a>
+                        <a href="https://www.youtube.com/@valorant" target="_blank" class="alert-link">YouTube</a>
+                        <a href="https://instagram.com/valorant" target="_blank" class="alert-link">Instagram</a>
+                        <a href="https://www.tiktok.com/@valorant" target="_blank" class="alert-link">TikTok</a>
+                        <a href="https://www.facebook.com/playvalorant/" target="_blank" class="alert-link">Facebook</a>
+                        <a href="https://discord.com/invite/valorant" target="_blank" class="alert-link">Discord</a>
+                    </div>
+                </div>
+                <div class="dropdown"><a href="VCT Form.html" class="rack">Esports</a></div>
+                <button class="team" onclick="window.location.href='About Us.html'"><b>About US</b></button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-video-container">
+        <video class="background-video" autoplay muted loop playsinline>
+            <source src="LoopX.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="main-content">
+        <h1 align="Center" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+        'Open Sans', 'Helvetica Neue', sans-serif; color: coral;"><u>Welcome</u> <u>to</u> <u>Valorant</u></h1>
+        <img src="Whatever This is.png" class="center" height="600px" width="1000px">
+        <p align="Justify">In this website, we've made an Overview of the game, a page to access different agents that
+            are used
+            in the game, separate webpages for 4 agents that we considered good, a form that you can fill and also a web
+            page about our team.
+            Apart from this, there are other hyperlinks in this website which lead to the official page of Valorant
+            (meaning the actual website). There are also links to the social media handles of the game.
+            We added that just to make the website feel complete, and have no intention of earning cheat marks. <br><br>
+
+            <center>Anyway, we won't take much of your time. Enjoy the website, and feel free to give us your views
+                about it. <br><br>
+                Have A Nice Day :)
+            </center>
+        </p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Valorant Fan Site. All rights reserved.</p><br>
+            <p>This website mentions the game Valorant and several components in it. We would like to give a remainder
+                that
+                none of it belongs to us and that anything related to Valorant is the property of Riot Games Inc. They
+                have all the
+                rights. This is just a Fan Website made as a college project.
+            </p>
+        </div>
+    </footer>
+
+    <div id="custom-popup" class="popup-overlay">
+        <div class="popup-box">
+            <p>So uh... the website that you're about to go to wasn't developed by us. If you're gonna
+                visit a social media handle, that doesn't belong to us either. That website belongs to Riot
+                Games Inc. and the social media handles also belong to them (the social media site themselves are not
+                the property of Riot Games).<br><br>
+                Please don't give us the marks based on how good <i>that</i> website looks, because it isn't ours
+                (please don't cut
+                our marks either - we were not trying to cheat).
+            </p>
+            <button onclick="redirectAndClosePopup()">Got it!</button>
+        </div>
+    </div>
+    <script src="Pop.js"></script>
+
+</body>
+
+</html>

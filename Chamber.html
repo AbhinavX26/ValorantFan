@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Agent Name - Valorant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="Valorant.png" type="image/png">
+  <link rel="stylesheet" href="CSS.css">
+  <link rel="stylesheet" href="Vid.css">
+  <link rel="stylesheet" href="Buttons.css">
+  <link rel="stylesheet" type="text/css" href="Pop-up.css">
+  <style>
+    * {
+
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: white;
+      padding-top: 75px;
+    }
+
+    .agent-info {
+      max-width: 600px;
+    }
+
+    .agent-info h1 {
+      padding-top: 150px;
+      padding-right: 5px;
+      font-size: 48px;
+      color: #ff4655;
+
+    }
+
+    .abilities-section {
+      margin: 40px 60px;
+    }
+
+    .ability-icons {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .hero-section {
+      background-image: url("Chamber.png");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .hero-overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .header-left img {
+      max-height: 60px;
+      vertical-align: middle;
+    }
+
+    .ability-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 30px 25px;
+      flex-wrap: wrap;
+    }
+
+    .ability-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    .ability-description {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(219, 25, 41, 0.2);
+      display: none;
+    }
+
+    .ability-icons img {
+      width: 75px;
+      height: 75px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .abilities-section {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 60px 100px;
+      min-height: 100vh;
+    }
+
+    .ability-title {
+      font-size: 50px;
+      text-align: center;
+      color: #ff4655;
+      margin-bottom: 10px;
+    }
+
+    .ability-text {
+      font-size: 25px;
+      line-height: 1.6;
+      color: white;
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body class = "center">
+  <header class="top-nav" style="height: 90px;">
+    <div class="nav-container">
+      <div class="header-left">
+        <img src="Riot Games.jpg.webp" alt="Riot Games Logo" class="icon-logo-r" style="width: 95px;">
+        <img src="Heading.png" alt="Valorant Logo" class="icon-logo-v">
+      </div>
+      <nav class="nav-links">
+        <div class="dropdown">Game Info ▾
+          <div class="dropdown-menu">
+            <a href="Overview.html">Overview</a>
+            <a href="Agents.html">Agents</a>
+            <a href="https://playvalorant.com/en-us/maps/" class="alert-link">Maps</a>
+          </div>
+        </div>
+        <div class="dropdown"><a href="https://playvalorant.com/en-us/media/" class="rack alert-link">Media</a></div>
+        <div class="dropdown"><a href="https://playvalorant.com/en-us/news/" class="rack alert-link">News</a></div>
+        <div class="dropdown">Social Media ▾
+          <div class="dropdown-menu">
+            <a href="https://twitter.com/valorant" target="_blank" class="alert-link">X</a>
+            <a href="https://www.youtube.com/@valorant" target="_blank" class="alert-link">YouTube</a>
+            <a href="https://instagram.com/valorant" target="_blank" class="alert-link">Instagram</a>
+            <a href="https://www.tiktok.com/@valorant" target="_blank" class="alert-link">TikTok</a>
+            <a href="https://www.facebook.com/playvalorant/" target="_blank" class="alert-link">Facebook</a>
+            <a href="https://discord.com/invite/valorant" target="_blank" class="alert-link">Discord</a>
+          </div>
+        </div>
+        <div class="dropdown"><a href="VCT Form.html" class="rack">Esports</a></div>
+        <button class="Home" onclick="window.location.href='Home Page.html'"><b>Home Page</b></button>
+        <button class="US" onclick="window.location.href='About Us.html'"><b>About US</b></button>
+      </nav>
+    </div>
+  </header>
+
+  <audio id="Slowed" src="Trademark.mp3"></audio>
+  <audio id="Deadshot" src="Headhunter.mp3"></audio>
+  <audio id="Snap" src="Rendezvous.mp3"></audio>
+  <audio id="Finesse" src="Chamber's Voice.mp3"></audio>
+
+  <div class="hero-section">
+    <div class="hero-overlay">
+      <div class="agent-info">
+        <h1>Chamber</h1>
+        <p align="justify" style="font-size: 22px; margin-left: 15px;">
+          Well dressed but equally well armed, Chamber is a French marksman and weapons designer who plays the
+          role of a Sentinel, using his tech and guns to hold plant sites and deny entry to the attackers trying to get
+          in.
+          Chamber uses his Nanotech gadgets to slow down enemies, teleport across sites and land high damage bullets,
+          making him a
+          very dangerous site holder.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="abilities-section">
+    <h1 align="center" style="font-size: 50px;">Abilities</h1>
+    <div class="ability-icons">
+      <img src="Trademark-white.png" alt="Ability 1" onclick="showAbility(0); playSound();" class="ability-icons img">
+      <img src="Headhunter-white.png" alt="Ability 2" onclick="showAbility(1); playSound();" class="ability-icons img">
+      <img src="Rendezvous-white.png" alt="Ability 3" onclick="showAbility(2); playSound();" class="ability-icons img">
+      <img src="Tour De Force-white.png" alt="Ability 4" onclick="showAbility(3); playSound();"
+        class="ability-icons img">
+    </div>
+
+    <div class="ability-description" id="abilityDesc"></div>
+  </div>
+
+  <script>
+    const abilityTexts = [
+      {
+        name: "Trademark",
+        description: "Trademark is Chamber's slow trap, useful for denying entry into sites. When used, Chamber deploys a small trap on the ground that automatically detects enemies in its area and shoots a slow zone on them, slowing them down greatly. However, Chamber must be in the range of the Trademark for it to work.",
+        soundID: "Slowed"
+      },
+      {
+        name: "Headhunter",
+        description: "Headhunter is one of Chamber's two guns, capable of housing 8 bullets. Chamber equips his custom made heavy pistol which deals a damage of 55 on a body shot and an instant kill with a headshot. It also has a scoped sight, capable of giving the user a better aim in shooting enemies standing at a distance. It's a pocket Guardian gun basically, allowing for a high advantage in Economy rounds.",
+        soundID: "Deadshot"
+      },
+      {
+        name: "Rendezvous",
+        description: "Rendezvous is Chamber's Signature Ability, and it recharges every 35 seconds. When used, Chamber deploys a teleport anchor which has a certain range. When Chamber is in the range of the anchor, he can instatly teleport back to the anchor whenever he wants, allowing for a quick getaway from danger. Once teleported, the anchor goes on a 35 second cooldown, so it must be used wisely.",
+        soundID: "Snap"
+      },
+      {
+        name: "Tour De Force",
+        description: "This is Chamber's Ultimate Ability, and experts say that it is the most powerful Ultimate Ability in the whole game. When used, Chamber converts his golden Nanotech tattoos into a deadly Custom Sniper Rifle. This sniper has 5 bullets, but even one hit one an opponent's upper body gets a confirmed kill. Also, a slow zone is deployed around an opponent killed by Tour De Force, extremely slowing down any of his/her teammates around for an easy kill. This gun is a monster in Economy rounds and can easily tip the scales of the game single handedly.",
+        soundID: "Finesse"
+      }
+    ];
+
+    function showAbility(index) {
+      const desc = document.getElementById("abilityDesc");
+
+      if (!abilityTexts[index]) return;
+
+      const { name, description, soundID } = abilityTexts[index];
+
+      desc.innerHTML = `
+      <h3 class="ability-title">${name}</h3>
+      <p class="ability-text">${description}</p>
+    `;
+      desc.style.display = "block";
+
+      const audio = document.getElementById(soundID);
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    }
+  </script>
+
+  <audio id="exitAudio" src="Chamber Left.mp3"></audio>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Valorant Fan Site. All rights reserved.</p><br>
+      <p>This website mentions the game Valorant and several components in it. We would like to give a remainder
+        that
+        none of it belongs to us and that anything related to Valorant is the property of Riot Games Inc. They
+        have all the
+        rights. This is just a Fan Website made as a college project.
+      </p>
+    </div>
+  </footer>
+
+  <div id="custom-popup" class="popup-overlay">
+    <div class="popup-box">
+      <p>So uh... the website that you're about to go to wasn't developed by us. If you're gonna
+        visit a social media handle, that doesn't belong to us either. That website belongs to Riot
+        Games Inc. and the social media handles also belong to them (the social media site themselves are not
+        the property of Riot Games).<br><br>
+        Please don't give us the marks based on how good <i>that</i> website looks, because it isn't ours
+        (please don't cut
+        our marks either - we were not trying to cheat).
+      </p>
+      <button onclick="redirectAndClosePopup()">Got it!</button>
+    </div>
+  </div>
+  <script src="Pop.js"></script>
+
+</body>
+
+</html>

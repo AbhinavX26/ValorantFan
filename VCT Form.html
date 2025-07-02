@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>VCT Registration</title>
+    <link rel="icon" href="Valorant.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <link rel="stylesheet" type="text/css" href="Vid.css">
+    <link rel="stylesheet" type="text/css" href="Buttons.css">
+    <link rel="stylesheet" type="text/css" href="Pop-up.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://cdna.artstation.com/p/assets/images/images/025/669/906/large/dino-rhinosaur-done-wp-pink-with-pic.jpg?1586544608&dl=1') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 115vh;
+            position: relative;
+        }
+
+        .thing {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            margin-top: 90px;
+            height: 80vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .thing::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .thing::-webkit-scrollbar-thumb {
+            background-color: cyan;
+            border-radius: 10px;
+        }
+
+        .form-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+            padding-right: 10px;
+            max-height: 100%;
+        }
+
+        input,
+        label {
+            width: 98%;
+            padding: 10px;
+            margin: 14px 0 35px 0;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(239, 19, 33);
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        select:focus,
+        label:focus,
+        option:focus {
+            box-shadow: 0 0 10px rgb(5, 241, 60);
+        }
+
+        select {
+            width: 98%;
+            padding: 10px;
+            margin: 14px 0 35px 0;
+            background-color: #2b2b2b;
+            color: rgb(227, 11, 11);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border: 1px solid #444;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        select option {
+            color: #00ffff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #1a1a1a;
+        }
+
+        .sub {
+            width: 440px;
+            padding: 10px;
+            background: cyan;
+            color: black;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 9px;
+        }
+
+        .sub:hover {
+            background: red;
+            box-shadow: 0 0 15px red;
+        }
+
+        .play {
+            display: inline-block;
+            position: relative;
+        }
+
+        .play select {
+            padding-right: 50px;
+        }
+
+        .play .arrow {
+            position: absolute;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+
+        .inline {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .inline label {
+            color: rgb(216, 8, 8);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .inline select {
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 6px;
+            width: 160px;
+            background-color: #3b3838;
+            color: rgb(239, 6, 6);
+            border: 1px solid #555;
+            margin-left: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="header-left">
+                <img src="Riot Games.jpg.webp" alt="Riot Games Logo" class="icon-logo-r">
+                <img src="Heading.png" alt="Valorant Logo" class="icon-logo-v">
+            </div>
+            <nav class="nav-links">
+                <div class="dropdown">Game Info ▾
+                    <div class="dropdown-menu">
+                        <a href="Overview.html">Overview</a>
+                        <a href="Agents.html">Agents</a>
+                        <a href="https://playvalorant.com/en-us/maps/" class="alert-link">Maps</a>
+                    </div>
+                </div>
+                <div class="dropdown"><a href="https://playvalorant.com/en-us/media/" class="rack alert-link">Media</a>
+                </div>
+                <div class="dropdown"><a href="https://playvalorant.com/en-us/news/" class="rack alert-link">News</a>
+                </div>
+                <div class="dropdown">Social Media ▾
+                    <div class="dropdown-menu">
+                        <a href="https://twitter.com/valorant" target="_blank" class="alert-link">X</a>
+                        <a href="https://www.youtube.com/@valorant" target="_blank" class="alert-link">YouTube</a>
+                        <a href="https://instagram.com/valorant" target="_blank" class="alert-link">Instagram</a>
+                        <a href="https://www.tiktok.com/@valorant" target="_blank" class="alert-link">TikTok</a>
+                        <a href="https://www.facebook.com/playvalorant/" target="_blank" class="alert-link">Facebook</a>
+                        <a href="https://discord.com/invite/valorant" target="_blank" class="alert-link">Discord</a>
+                    </div>
+                </div>
+                <div class="dropdown"><a href="VCT Form.html" class="rack">Esports</a></div>
+                <button class="Home" onclick="window.location.href='Home Page.html'"><b>Home Page</b></button>
+                <button class="US" onclick="window.location.href='About Us.html'"><b>About US</b></button>
+            </nav>
+        </div>
+    </header>
+    <div class="thing">
+        <div class="form-content">
+            <h1 style="color: cyan; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 
+            'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 40px;"><u>VCT</u> <u>Registration</u></h1>
+
+            <form id="vctForm" method="post">
+
+                <input type="text" name="name" required placeholder="Your Name">
+
+                <input type="email" name="email" required placeholder="Email">
+
+                <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY (No need to use '/')" maxlength="10"
+                    required>
+
+
+                <script>
+                    const dobInput = document.getElementById("dob");
+                    const form = document.getElementById("vctForm");
+
+                    dobInput.addEventListener("input", () => {
+                        let raw = dobInput.value.replace(/[^0-9]/g, "");
+                        let day = raw.substring(0, 2);
+                        let month = raw.substring(2, 4);
+                        let year = raw.substring(4, 8);
+
+                        if (day.length === 2 && month.length === 2 && year.length === 4) {
+                            const dayNum = parseInt(day);
+                            const monthNum = parseInt(month);
+                            const yearNum = parseInt(year);
+
+                            if (dayNum > 31 || monthNum > 12) {
+                                showFormError("Enter the birthdate correctly, stupid. Did you forget when you were born?");
+                                dobInput.value = "";
+                                return;
+                            }
+
+                            if (yearNum < 1982)
+                            {
+                                showFormError("Go home, uncle. You're too old for this.");
+                                dobInput.value = "";
+                                return;
+                            }
+
+                            if (yearNum > 2020)
+                            {
+                                showFormError("Go back to school, kid. Make up for your failing grades, first.");
+                                dobInput.value = "";
+                                return;
+                            }
+                        
+                        }
+
+                        let formatted = "";
+                        if (day) formatted += day;
+                        if (month) formatted += "/" + month;
+                        if (year) formatted += "/" + year;
+
+                        dobInput.value = formatted;
+                    });
+
+                    dobInput.addEventListener("keydown", (e) => {
+                        if (e.key === "/") e.preventDefault();
+                    });
+
+                    form.addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        const gamerId = document.getElementById("gamerId").value.trim();
+                        const riotIdFormat = /^[a-zA-Z0-9]{3,16}#[a-zA-Z0-9]{2,6}$/;
+
+                        if (!riotIdFormat.test(gamerId)) {
+                            showFormError("You fool! Go and look at your gamer ID and enter it properly!");
+                            return;
+                        }
+
+                        const formData = {
+                            name: form.name.value,
+                            email: form.email.value,
+                            dob: form.dob.value,
+                            gamerId: gamerId,
+                            experience: form.experience.value,
+                            rank: form.rank.value,
+                            team: form.team.value,
+                            role: form.role.value,
+                            specialization: form.Specialization.value
+                        };
+
+                        localStorage.setItem("vctData", JSON.stringify(formData));
+
+                        document.body.style.cursor = "wait";
+                        setTimeout(() => {
+                            window.location.href = "Thanks.html";
+                        }, 2000);
+                    });
+
+                    function showFormError(message) {
+                        document.getElementById("error-popup-message").innerText = message;
+                        document.getElementById("form-error-popup").style.display = "flex";
+                    }
+
+                    function closeFormErrorPopup() {
+                        document.getElementById("form-error-popup").style.display = "none";
+                    }
+
+                </script>
+
+
+
+                <div class="inline">
+                    <label for="experience">What's your gamer account?</label>
+                    <input type="text" id="gamerId" class="inline" required placeholder="RiotID#Tagline">
+                </div>
+
+                <div class="inline">
+                    <label for="experience">Have you played competitively before?</label>
+                    <div class="play">
+                        <select name="experience" required>
+                            <option value="">Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <select name="rank" required>
+                    <option value="">Your Current Rank</option>
+                    <option>Unranked</option>
+                    <option>Iron</option>
+                    <option>Bronze</option>
+                    <option>Silver</option>
+                    <option>Gold</option>
+                    <option>Platinum</option>
+                    <option>Diamond</option>
+                    <option>Ascendant</option>
+                    <option>Immortal</option>
+                    <option>Radiant</option>
+                </select>
+
+                <select name="team" required>
+                    <option value="">For which team are you applying?</option>
+                    <option>Sentinels</option>
+                    <option>Paper Rex</option>
+                    <option>Fnatic</option>
+                    <option>Team Liquid</option>
+                    <option>DRX</option>
+                    <option>LOUD</option>
+                    <option>NAVI</option>
+                    <option>EDward Gaming</option>
+                    <option>T1</option>
+                </select>
+
+                <select name="role" required>
+                    <option value="">Select Your Role</option>
+                    <option>Duelist</option>
+                    <option>Initiator</option>
+                    <option>Controller</option>
+                    <option>Sentinel</option>
+                    <option>Flexible</option>
+                </select>
+
+                <select name="Specialization" required>
+                    <option value="">What do you specialize in?</option>
+                    <option>Rifle Mechanics</option>
+                    <option>Sniper</option>
+                    <option>Close Quarter Combat</option>
+                    <option>Ability Use</option>
+                    <option>Area/Site Holding</option>
+                    <option>Flanks</option>
+                    <option>Flexible</option>
+                </select>
+
+                <button type="submit" class="sub">Register Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="custom-popup" class="popup-overlay">
+        <div class="popup-box">
+            <p>So uh... the website that you're about to go to wasn't developed by us. If you're gonna
+                visit a social media handle, that doesn't belong to us either. That website belongs to Riot
+                Games Inc. and the social media handles also belong to them (the social media site themselves are not
+                the property of Riot Games).<br><br>
+                Please don't give us the marks based on how good <i>that</i> website looks, because it isn't ours
+                (please don't cut
+                our marks either - we were not trying to cheat).
+            </p>
+            <button onclick="redirectAndClosePopup()">Got it!</button>
+        </div>
+    </div>
+
+    <div id="form-error-popup" class="popup-overlay">
+        <div class="popup-box">
+            <p id="error-popup-message"></p>
+            <button onclick="closeFormErrorPopup()">Got it!</button>
+        </div>
+    </div>
+    <script src="Pop.js"></script>
+</body>
+
+</html>

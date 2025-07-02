@@ -1,0 +1,39 @@
+.US {
+    height: 35px;
+    padding: 4px 18px;
+    margin-left: 30px;
+    font-size: 17px;
+    background-color: #bd2431;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.US:hover {
+    transform: scale(1.08);
+    background-color: #e33c4d;
+    text-shadow: 0 0 5px #e33c4d;
+}
+
+.Home {
+    height: 35px;
+    padding: 5px 18px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #1c8247, #28a745);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-left: 360px;
+}
+
+.Home:hover {
+    transform: scale(1.08);
+    background-color: #1c8247;
+    text-shadow: 0 0 5px #1c8247;
+}
